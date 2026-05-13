@@ -45,6 +45,16 @@
         .btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
         .btn-secondary:hover { background: #fff; color: #1a1a2e; }
         
+        /* About */
+        .about { padding: 5rem 0; background: #fff; }
+        .about-content { max-width: 900px; margin: 0 auto; }
+        .about-text { text-align: center; }
+        .about-text p { color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8; }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .stat { text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 16px; }
+        .stat h3 { font-size: 2.5rem; color: #e94560; font-weight: 800; }
+        .stat p { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
+        
         /* Products */
         .products { padding: 5rem 0; background: #f8f9fa; }
         .section-title { text-align: center; margin-bottom: 3rem; }
@@ -53,9 +63,9 @@
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
-        .product-image { height: 220px; background: #f0f0f0; overflow: hidden; }
+        .product-image { height: 220px; background: #f0f0f0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .product-card:hover .product-image img { transform: scale(1.05); }
+        .product-card:hover .product-image img { transform: scale(1.1); }
         .product-info { padding: 1.5rem; }
         .product-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a2e; }
         .product-info .hp { color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
@@ -136,6 +146,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#specs">Specifications</a></li>
                     <li><a href="#why">Why Us</a></li>
@@ -160,6 +171,40 @@
             <div class="cta-buttons">
                 <a href="#products" class="btn btn-primary">View Products</a>
                 <a href="#contact" class="btn btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About ShengTuo</h2>
+                <p>Shandong Shengtuo Heavy Industry Co., Ltd.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Shandong Shengtuo Heavy Industry Co., Ltd. is a professional manufacturer and exporter of agricultural machinery, specializing in the production of high-quality tractors ranging from 25HP to 280HP. With over 15 years of experience in the industry, we have established ourselves as a trusted name in agricultural machinery manufacturing.</p>
+                    <p>Our products are exported to more than 50 countries worldwide, serving farmers and agricultural businesses across continents. We are committed to delivering reliable, durable, and cost-effective machinery that meets the diverse needs of modern agriculture.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Countries Served</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10K+</h3>
+                            <p>Units Sold</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>Employees</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

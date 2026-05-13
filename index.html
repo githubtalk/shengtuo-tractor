@@ -20,13 +20,22 @@
         nav ul { display: flex; list-style: none; gap: 2rem; }
         nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: #e94560; }
-        .mobile-menu { display: none; }
+        .mobile-menu { display: none; cursor: pointer; font-size: 1.5rem; }
         
         /* Hero */
-        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 5rem 0; text-align: center; }
+        .hero { 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+            color: #fff; 
+            padding: 4rem 0; 
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
         .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
         .hero h1 span { color: #e94560; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
         .hero-badges { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .badge { background: rgba(233,69,96,0.2); border: 1px solid #e94560; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; }
         .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
@@ -41,10 +50,12 @@
         .section-title { text-align: center; margin-bottom: 3rem; }
         .section-title h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
         .section-title p { color: #666; font-size: 1.1rem; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
-        .product-image { height: 200px; background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem; }
+        .product-image { height: 220px; background: #f0f0f0; overflow: hidden; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .product-card:hover .product-image img { transform: scale(1.05); }
         .product-info { padding: 1.5rem; }
         .product-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a2e; }
         .product-info .hp { color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
@@ -71,7 +82,7 @@
         
         /* Contact */
         .contact { padding: 5rem 0; background: #f8f9fa; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
         .contact-card { background: #fff; padding: 2rem; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         .contact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
         .contact-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
@@ -86,12 +97,34 @@
         .footer-col a:hover { color: #e94560; }
         .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
         
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             nav ul { display: none; }
-            .mobile-menu { display: block; font-size: 1.5rem; }
+            .mobile-menu { display: block; }
             .specs-table { font-size: 0.85rem; }
             .specs-table th, .specs-table td { padding: 0.5rem; }
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -115,7 +148,7 @@
     
     <!-- Hero -->
     <section class="hero" id="home">
-        <div class="container">
+        <div class="container hero-content">
             <h1>Agricultural Tractors from <span>China</span></h1>
             <p>Leading manufacturer and exporter of quality farm machinery. From 25HP garden tractors to 280HP high-horsepower tractors, we deliver reliable performance at competitive prices.</p>
             <div class="hero-badges">
@@ -139,24 +172,11 @@
                 <p>Complete range of tractors for every farming need</p>
             </div>
             <div class="product-grid">
-                <!-- Product 1 -->
+                <!-- ST404 -->
                 <div class="product-card">
-                    <div class="product-image">🚜</div>
-                    <div class="product-info">
-                        <h3>ST304 Series</h3>
-                        <div class="hp">25-45 HP Compact Tractor</div>
-                        <p>Perfect for orchards, greenhouses, and small farms. Excellent maneuverability.</p>
-                        <div class="features">
-                            <span class="feature-tag">4WD</span>
-                            <span class="feature-tag">Diesel</span>
-                            <span class="feature-tag">Compact</span>
-                        </div>
+                    <div class="product-image">
+                        <img src="images/2025226853232798.jpg" alt="ST404 Tractor" loading="lazy">
                     </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">🚜</div>
                     <div class="product-info">
                         <h3>ST404 Series</h3>
                         <div class="hp">35-65 HP Utility Tractor</div>
@@ -169,39 +189,11 @@
                     </div>
                 </div>
                 
-                <!-- Product 3 -->
+                <!-- ST804 -->
                 <div class="product-card">
-                    <div class="product-image">🚜</div>
-                    <div class="product-info">
-                        <h3>ST500 Series</h3>
-                        <div class="hp">40-60 HP Farm Tractor</div>
-                        <p>Reliable workhorse for plowing, tilling, and transportation.</p>
-                        <div class="features">
-                            <span class="feature-tag">4WD</span>
-                            <span class="feature-tag">Power Steering</span>
-                            <span class="feature-tag">Hydraulic</span>
-                        </div>
+                    <div class="product-image">
+                        <img src="images/2025226834184905.jpg" alt="ST804 Garden Tractor" loading="lazy">
                     </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">🚜</div>
-                    <div class="product-info">
-                        <h3>ST704 Series</h3>
-                        <div class="hp">55-80 HP Heavy Duty</div>
-                        <p>Built for demanding field work. High torque, durable construction.</p>
-                        <div class="features">
-                            <span class="feature-tag">4WD</span>
-                            <span class="feature-tag">Heavy Duty</span>
-                            <span class="feature-tag">High Torque</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image">🚜</div>
                     <div class="product-info">
                         <h3>ST804 Garden</h3>
                         <div class="hp">60-80 HP Garden Tractor</div>
@@ -214,9 +206,11 @@
                     </div>
                 </div>
                 
-                <!-- Product 6 -->
+                <!-- ST1154 -->
                 <div class="product-card">
-                    <div class="product-image">🚜</div>
+                    <div class="product-image">
+                        <img src="images/202522683152783.jpg" alt="ST1154 Tractor" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>ST1154 Series</h3>
                         <div class="hp">80-120 HP Row Crop</div>
@@ -229,9 +223,11 @@
                     </div>
                 </div>
                 
-                <!-- Product 7 -->
+                <!-- ST1354 -->
                 <div class="product-card">
-                    <div class="product-image">🚜</div>
+                    <div class="product-image">
+                        <img src="images/2025226829479411.jpg" alt="ST1354 Tractor" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>ST1354 Series</h3>
                         <div class="hp">100-140 HP Agricultural</div>
@@ -244,17 +240,70 @@
                     </div>
                 </div>
                 
-                <!-- Product 8 -->
+                <!-- ST1404 -->
                 <div class="product-card">
-                    <div class="product-image">🚜</div>
+                    <div class="product-image">
+                        <img src="images/202522682641265.jpg" alt="ST1404 Tractor" loading="lazy">
+                    </div>
                     <div class="product-info">
-                        <h3>ST1854 Series</h3>
-                        <div class="hp">150-220 HP Large Farm</div>
-                        <p>Our most powerful tractor. Handles the toughest field conditions.</p>
+                        <h3>ST1404 Series</h3>
+                        <div class="hp">120-150 HP Heavy Duty</div>
+                        <p>Built for demanding field work. High torque, durable construction.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Heavy Duty</span>
+                            <span class="feature-tag">High Torque</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ST1604 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/2025226823229802.jpg" alt="ST1604 Tractor" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>ST1604 Series</h3>
+                        <div class="hp">150-160 HP Large Farm</div>
+                        <p>Handles the toughest field conditions with ease.</p>
                         <div class="features">
                             <span class="feature-tag">4WD</span>
                             <span class="feature-tag">Deluxe Cabin</span>
                             <span class="feature-tag">Smart Control</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ST1804 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/2025226817568743.jpg" alt="ST1804 Tractor" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>ST1804 Series</h3>
+                        <div class="hp">180-220 HP Large Scale</div>
+                        <p>Our most powerful tractor for the biggest jobs.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Premium Cabin</span>
+                            <span class="feature-tag">Max Power</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ST2204 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/202522681071030.jpg" alt="ST2204 Tractor" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>ST2204 Series</h3>
+                        <div class="hp">200-280 HP Mega Power</div>
+                        <p>Maximum power for professional agricultural contractors.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Industrial Grade</span>
+                            <span class="feature-tag">Ultimate Performance</span>
                         </div>
                     </div>
                 </div>
@@ -276,7 +325,6 @@
                         <th>HP Range</th>
                         <th>Engine</th>
                         <th>Drive Type</th>
-                        <th>Weight</th>
                         <th>Application</th>
                     </tr>
                 </thead>
@@ -286,7 +334,6 @@
                         <td>25-45 HP</td>
                         <td>4-Cylinder Diesel</td>
                         <td>4WD</td>
-                        <td>1,200 kg</td>
                         <td>Orchard, Greenhouse, Small Farm</td>
                     </tr>
                     <tr>
@@ -294,7 +341,6 @@
                         <td>35-65 HP</td>
                         <td>4-Cylinder Diesel</td>
                         <td>4WD</td>
-                        <td>1,800 kg</td>
                         <td>General Farming, Transport</td>
                     </tr>
                     <tr>
@@ -302,7 +348,6 @@
                         <td>30-50 HP</td>
                         <td>4-Cylinder Diesel</td>
                         <td>4WD</td>
-                        <td>2,000 kg</td>
                         <td>Plowing, Tilling, Seeding</td>
                     </tr>
                     <tr>
@@ -310,7 +355,6 @@
                         <td>55-80 HP</td>
                         <td>4-Cylinder Turbo</td>
                         <td>4WD</td>
-                        <td>2,800 kg</td>
                         <td>Heavy Plowing, Harvesting</td>
                     </tr>
                     <tr>
@@ -318,7 +362,6 @@
                         <td>60-80 HP</td>
                         <td>4-Cylinder Diesel</td>
                         <td>4WD</td>
-                        <td>2,400 kg</td>
                         <td>Orchard, Garden, Specialty</td>
                     </tr>
                     <tr>
@@ -326,7 +369,6 @@
                         <td>80-120 HP</td>
                         <td>6-Cylinder Turbo</td>
                         <td>4WD</td>
-                        <td>4,500 kg</td>
                         <td>Row Crop, Large Field</td>
                     </tr>
                     <tr>
@@ -334,7 +376,6 @@
                         <td>100-140 HP</td>
                         <td>6-Cylinder Turbo</td>
                         <td>4WD</td>
-                        <td>5,200 kg</td>
                         <td>Professional Farming</td>
                     </tr>
                     <tr>
@@ -342,16 +383,21 @@
                         <td>150-160 HP</td>
                         <td>6-Cylinder Turbo</td>
                         <td>4WD</td>
-                        <td>6,000 kg</td>
                         <td>Heavy Duty Field Work</td>
                     </tr>
                     <tr>
-                        <td>ST1854</td>
-                        <td>185-220 HP</td>
+                        <td>ST1804</td>
+                        <td>180-220 HP</td>
                         <td>6-Cylinder Turbo</td>
                         <td>4WD</td>
-                        <td>7,000 kg</td>
                         <td>Large Scale Agriculture</td>
+                    </tr>
+                    <tr>
+                        <td>ST2204</td>
+                        <td>200-280 HP</td>
+                        <td>6-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>Mega Scale Farming</td>
                     </tr>
                 </tbody>
             </table>
@@ -415,6 +461,12 @@
                     <p><a href="tel:+8613806461474">+86-13806461474</a></p>
                 </div>
                 <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp / WeChat</h3>
+                    <p>+86-13806461474</p>
+                    <p>Same number for both</p>
+                </div>
+                <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
                     <p><a href="mailto:sdtractor@outlook.com">sdtractor@outlook.com</a></p>
@@ -426,15 +478,14 @@
                     <p>Beihai Road, Weifang City</p>
                     <p>Shandong Province, China</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>WhatsApp / WeChat</h3>
-                    <p>+86-13806461474</p>
-                    <p>Same number for both</p>
-                </div>
             </div>
         </div>
     </section>
+    
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/8613806461474" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        💬
+    </a>
     
     <!-- Footer -->
     <footer>

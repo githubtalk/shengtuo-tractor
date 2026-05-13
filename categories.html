@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories - ShengTuo Tractors | Agricultural Machinery</title>
+    <meta name="description" content="Browse ShengTuo tractor product categories: Compact tractors (25-50HP), Utility tractors (50-100HP), and Heavy-duty tractors (100-280HP) for farming worldwide.">
+    <meta name="keywords" content="tractor categories, compact tractor, utility tractor, heavy duty tractor, farm machinery, agricultural equipment">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a2e; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: #e94560; }
+        .logo span { color: #fff; }
+        .logo a { text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #e94560; }
+        
+        /* Breadcrumb */
+        .breadcrumb { padding: 1rem 0; background: #f8f9fa; }
+        .breadcrumb a { color: #666; text-decoration: none; }
+        .breadcrumb a:hover { color: #e94560; }
+        .breadcrumb span { color: #999; margin: 0 0.5rem; }
+        
+        /* Categories */
+        .categories { padding: 4rem 0; }
+        .category-block { margin-bottom: 4rem; }
+        .category-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid #e94560; }
+        .category-icon { font-size: 3rem; }
+        .category-title h2 { font-size: 2rem; font-weight: 700; color: #1a1a2e; }
+        .category-title p { color: #666; }
+        
+        .product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .product-item { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 1.5rem; transition: all 0.3s; text-decoration: none; color: inherit; display: block; }
+        .product-item:hover { border-color: #e94560; box-shadow: 0 4px 20px rgba(233,69,96,0.15); transform: translateY(-4px); }
+        .product-item h3 { font-size: 1.2rem; font-weight: 600; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .product-item .hp { color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .product-item p { color: #666; font-size: 0.9rem; }
+        .product-item .arrow { color: #e94560; font-weight: 600; margin-top: 0.5rem; display: block; }
+        
+        /* Footer */
+        footer { background: #0f0f1a; color: #fff; padding: 3rem 0 1.5rem; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-col a:hover { color: #e94560; }
+        
+        /* WhatsApp */
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 999; }
+        
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .category-title h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html">Sheng<span>Tuo</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html" class="active">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a><span>›</span><strong>Products</strong>
+        </div>
+    </div>
+    
+    <section class="categories">
+        <div class="container">
+            <!-- Compact Tractors -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="category-icon">🚜</div>
+                    <div class="category-title">
+                        <h2>Compact Tractors (25-50 HP)</h2>
+                        <p>Perfect for small farms, orchards, greenhouses, and garden applications</p>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST304 Series</h3>
+                        <div class="hp">25-45 HP</div>
+                        <p>Compact design for orchards and greenhouses. Excellent maneuverability in tight spaces.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST404 Series</h3>
+                        <div class="hp">35-65 HP</div>
+                        <p>Versatile utility tractor for general farming tasks. Ideal for medium-sized operations.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST504 Series</h3>
+                        <div class="hp">30-50 HP</div>
+                        <p>Reliable workhorse for plowing, tilling, and transportation on medium farms.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST804 Garden</h3>
+                        <div class="hp">60-80 HP</div>
+                        <p>Designed for orchards, gardens, and specialized applications with narrow design.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Utility Tractors -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="category-icon">🚜</div>
+                    <div class="category-title">
+                        <h2>Utility Tractors (50-100 HP)</h2>
+                        <p>Multi-purpose tractors for diverse agricultural operations</p>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST704 Series</h3>
+                        <div class="hp">55-80 HP</div>
+                        <p>Built for demanding field work with high torque and durable construction.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST1154 Series</h3>
+                        <div class="hp">80-120 HP</div>
+                        <p>Powerful row crop tractor for large-scale farming operations.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Heavy Duty Tractors -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="category-icon">🚜</div>
+                    <div class="category-title">
+                        <h2>Heavy-Duty Tractors (100-280 HP)</h2>
+                        <p>High-horsepower tractors for professional agriculture and large-scale farming</p>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST1354 Series</h3>
+                        <div class="hp">100-140 HP</div>
+                        <p>High-performance tractor with AC cabin for professional farming operations.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST1404 Series</h3>
+                        <div class="hp">120-150 HP</div>
+                        <p>Heavy-duty tractor built for the most demanding field conditions.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST1604 Series</h3>
+                        <div class="hp">150-160 HP</div>
+                        <p>Handles toughest field conditions with deluxe cabin and smart controls.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST1804 Series</h3>
+                        <div class="hp">180-220 HP</div>
+                        <p>Premium power for large-scale agricultural operations.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                    <a href="index.html#products" class="product-item">
+                        <h3>ST2204 Series</h3>
+                        <div class="hp">200-280 HP</div>
+                        <p>Mega power tractor for professional agricultural contractors.</p>
+                        <span class="arrow">View Details →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <a href="https://wa.me/8613806461474" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 Shandong Shengtuo Heavy Industry Co., Ltd. | <a href="index.html">Home</a> | <a href="categories.html">Products</a> | <a href="index.html#contact">Contact</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

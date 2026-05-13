@@ -1,0 +1,10 @@
+﻿<%
+c_isqq="1"
+msn_num="mydemail@hotmail.com"
+msn_name="Henry"
+tt_skype=""
+qq_num="307774615"
+qq_name="Henry"
+wang_num="情系鸢飞"
+alibaba_num="agromachine"
+%>

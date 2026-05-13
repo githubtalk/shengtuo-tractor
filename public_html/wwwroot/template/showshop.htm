@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{Lankecms_title}</title>
+<meta name="keywords" content="{Lankecms_keyword}" />
+<meta name="description" content="{Lankecms_description}" />
+<link href="../css/style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../css/3css.css" media="screen" />
+<script type="text/javascript" language="javascript" src="../js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="../js/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.apic').lightBox();
+});
+</script>
+<!--[if lte IE 6]>
+<script src="../js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('div,img');
+    </script>
+<![endif]--> 
+</head>
+<body>
+<div id="main">
+
+<div id="translate">
+    <!-- Begin TranslateThis Button -->
+    <div id="translate-this"><a style="width:180px;height:18px;display:block;" class="translate-this-button" href="http://www.translatecompany.com/"></a></div>
+    <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
+    <script type="text/javascript">
+    TranslateThis();
+    </script>
+    <!-- End TranslateThis Button -->
+</div>
+
+<div id="header">
+
+    <div id="logo"><img src="{root}{Lankecms_logo}"></div>
+    
+    <div class="globalsearchformzone">
+        <form id="globalsearchform" name="search" method="get" action="{root}/search/search.asp">
+            <div class="globalsearchform">
+                <input name="search1" type="text" class="input" />
+            </div>
+            <div class="globalsearchform1">
+              <input name="imageField" type="image" src="../images/searchr.png" class="imgbutton" />
+            </div>
+        </form>
+    </div>
+    
+    <div id="nav">
+        <ul>
+{Lankecms_nav}
+        </ul>
+    </div>
+    
+</div>
+<!-- end of header -->
+
+<div class="flash">
+    <!--焦点广告-->
+    <script type="text/javascript">
+    var swf_width=968;var swf_height=350;
+    /*-- 参数 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 */
+    var config='5|0xffffff|0x000000|50|0xffffff|0xeb6100|0xa3a3a3';
+    var files='',links='', texts='';
+    {Lankecms_adv}
+    files=files.substring(1);
+    links=links.substring(1);texts=texts.substring(1);
+    document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+    document.write('<param name="movie" value="{root}/images/focus.swf" />');
+    document.write('<param name="quality" value="high" />');
+    document.write('<param name="menu" value="false" />');
+    document.write('<param name=wmode value="opaque" />');
+    document.write('<param name="FlashVars" value="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'" />');
+    document.write('<embed src="{root}/images/focus.swf" wmode="opaque" FlashVars="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+    document.write('</object>');
+    </script>
+</div>
+<!-- end of flash -->
+
+<div id="center">
+
+    <div id="left">
+        <div class="category_title">PRODUCT CATEGORIES</div>
+        <ul class="category">
+{Lankecms_leftnav}
+        </ul>
+        
+        <div class="category_title">CONTACT US</div>
+        <ul class="contact">
+            <li>Add：{Lankecms_dz}</li>
+            <li>Tel：{Lankecms_tel}</li>
+            <li>Fax：{Lankecms_fax}</li>
+            <li>E-mail：{Lankecms_email}</li>
+            <li>Contacts：{Lankecms_name}</li>
+        </ul>
+        
+    </div>
+    <!-- end of left -->
+    
+    <div id="right">   
+        <div class="category_title">Your position：<a href="{root}/index.html">Home</a> > <a href="{root}/products/">Product Show</a></div>
+        
+        <div class="product_show">        
+            <div class="show_pic">
+                <a href="{root}{Lankecms_img}" target="_blank" class="apic"><img name='picautozoom' class="img_border" src="{root}{Lankecms_img}" width="255" height="225"/></a>
+            </div>
+                  
+            <div class="product_att">
+                <h1>{Lankecms_protitle}</h1>
+                <ul>
+                    <li><strong>Product Numbers：</strong><b>{Lankecms_ProductNo}</b></li>
+                    <li><strong>Price：</strong><b class="red">{Lankecms_price}</b></li>
+                    <li><strong>Product description：</strong>{Lankecms_description2}</li>
+                    <li><a href="{root}/Inquiry/index.asp?id={id}"><img src="../images/order.gif"/></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>       
+        </div>
+        <!-- end of product_show -->
+        
+        <div class="jieshao_content">
+            <h3>INTRODUCTION:</h3>
+    {Lankecms_body}
+        </div>
+        
+        <div class="point">
+            <span class="to_prev">{Lankecms_prev}</span>
+            <span class="to_next">{Lankecms_next}</span>
+        </div>
+        
+    </div>
+    <!-- end of right -->
+    
+</div>
+<!-- end of center -->
+
+</div>
+<!-- end of main -->
+
+<div id="footer">  
+    <div class="copyright">
+        <p>{Lankecms_copyright}&nbsp;{Lankecms_beian} <a href="{root}/sitemap.html" target="_blank">Sitemap</a></p>
+        <p>Add：{Lankecms_dz} &nbsp;Tel：{Lankecms_tel} &nbsp;Fax：{Lankecms_fax}</p>
+    </div>
+    <div class="clear"></div>
+</div>
+
+{eqq}
+<script type="text/javascript" language="javascript" src="../js/picAutoZoom.js"></script>
+<script type="text/javascript" language="javascript">
+<!--
+    $.ajaxSetup({
+        timeout: 300000
+    });
+//-->
+</script>
+{Lankecms_share}
+</body>
+</html>

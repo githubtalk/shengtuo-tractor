@@ -1,0 +1,9 @@
+<%
+root=""
+product_num="20"
+plist_num="20"
+news_num="10"
+nlist_num="10"
+hot_num="5"
+tomail="sdtractor@outlook.com"
+%>

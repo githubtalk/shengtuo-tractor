@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShengTuo Tractor - Agricultural Machinery Export from China</title>
+    <meta name="description" content="Leading manufacturer and exporter of agricultural tractors from China. 25HP to 280HP tractors, farm equipment, quality machinery for worldwide farmers.">
+    <meta name="keywords" content="tractor, agricultural machinery, China tractor, farm equipment, ShengTuo, tractor exporter">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a2e; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: #e94560; }
+        .logo span { color: #fff; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #e94560; }
+        .mobile-menu { display: none; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 5rem 0; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero h1 span { color: #e94560; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; }
+        .hero-badges { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .badge { background: rgba(233,69,96,0.2); border: 1px solid #e94560; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; }
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+        .btn-primary { background: #e94560; color: #fff; }
+        .btn-primary:hover { background: #d63651; transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
+        .btn-secondary:hover { background: #fff; color: #1a1a2e; }
+        
+        /* Products */
+        .products { padding: 5rem 0; background: #f8f9fa; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-title p { color: #666; font-size: 1.1rem; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+        .product-image { height: 200px; background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem; }
+        .product-info { padding: 1.5rem; }
+        .product-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a2e; }
+        .product-info .hp { color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .product-info p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .product-info .features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .feature-tag { background: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: #555; }
+        
+        /* Specs Table */
+        .specs-section { padding: 5rem 0; background: #fff; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+        .specs-table th, .specs-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #eee; }
+        .specs-table th { background: #1a1a2e; color: #fff; font-weight: 600; }
+        .specs-table tr:hover { background: #f8f9fa; }
+        
+        /* Why Choose */
+        .why-section { padding: 5rem 0; background: #1a1a2e; color: #fff; }
+        .why-section .section-title h2 { color: #fff; }
+        .why-section .section-title p { color: rgba(255,255,255,0.7); }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .why-card { text-align: center; padding: 2rem; }
+        .why-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .why-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .why-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+        
+        /* Contact */
+        .contact { padding: 5rem 0; background: #f8f9fa; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .contact-card { background: #fff; padding: 2rem; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .contact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .contact-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .contact-card p { color: #666; }
+        .contact-card a { color: #e94560; text-decoration: none; font-weight: 600; }
+        
+        /* Footer */
+        footer { background: #0f0f1a; color: #fff; padding: 3rem 0 1.5rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #e94560; }
+        .footer-col p, .footer-col a { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 2; text-decoration: none; }
+        .footer-col a:hover { color: #e94560; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; }
+            .mobile-menu { display: block; font-size: 1.5rem; }
+            .specs-table { font-size: 0.85rem; }
+            .specs-table th, .specs-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Sheng<span>Tuo</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                    <li><a href="#why">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Agricultural Tractors from <span>China</span></h1>
+            <p>Leading manufacturer and exporter of quality farm machinery. From 25HP garden tractors to 280HP high-horsepower tractors, we deliver reliable performance at competitive prices.</p>
+            <div class="hero-badges">
+                <span class="badge">🚜 25HP - 280HP Range</span>
+                <span class="badge">🏭 15+ Years Experience</span>
+                <span class="badge">🌍 50+ Countries Served</span>
+                <span class="badge">⚙️ OEM/ODM Available</span>
+            </div>
+            <div class="cta-buttons">
+                <a href="#products" class="btn btn-primary">View Products</a>
+                <a href="#contact" class="btn btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Product Line</h2>
+                <p>Complete range of tractors for every farming need</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST304 Series</h3>
+                        <div class="hp">25-45 HP Compact Tractor</div>
+                        <p>Perfect for orchards, greenhouses, and small farms. Excellent maneuverability.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Diesel</span>
+                            <span class="feature-tag">Compact</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST404 Series</h3>
+                        <div class="hp">35-65 HP Utility Tractor</div>
+                        <p>Versatile tractor for general farming tasks. Ideal for medium-sized operations.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">8+4 Gear</span>
+                            <span class="feature-tag">PTO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST500 Series</h3>
+                        <div class="hp">40-60 HP Farm Tractor</div>
+                        <p>Reliable workhorse for plowing, tilling, and transportation.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Power Steering</span>
+                            <span class="feature-tag">Hydraulic</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST704 Series</h3>
+                        <div class="hp">55-80 HP Heavy Duty</div>
+                        <p>Built for demanding field work. High torque, durable construction.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Heavy Duty</span>
+                            <span class="feature-tag">High Torque</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST804 Garden</h3>
+                        <div class="hp">60-80 HP Garden Tractor</div>
+                        <p>Designed for orchards, gardens, and specialized applications.</p>
+                        <div class="features">
+                            <span class="feature-tag">Narrow Design</span>
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Multi-terrain</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST1154 Series</h3>
+                        <div class="hp">80-120 HP Row Crop</div>
+                        <p>Powerful tractor for large-scale farming operations.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Cab Available</span>
+                            <span class="feature-tag">High Capacity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST1354 Series</h3>
+                        <div class="hp">100-140 HP Agricultural</div>
+                        <p>High-performance tractor for professional farming operations.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">AC Cabin</span>
+                            <span class="feature-tag">GPS Ready</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">🚜</div>
+                    <div class="product-info">
+                        <h3>ST1854 Series</h3>
+                        <div class="hp">150-220 HP Large Farm</div>
+                        <p>Our most powerful tractor. Handles the toughest field conditions.</p>
+                        <div class="features">
+                            <span class="feature-tag">4WD</span>
+                            <span class="feature-tag">Deluxe Cabin</span>
+                            <span class="feature-tag">Smart Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Specifications -->
+    <section class="specs-section" id="specs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Product Specifications</h2>
+                <p>Compare our popular models</p>
+            </div>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>HP Range</th>
+                        <th>Engine</th>
+                        <th>Drive Type</th>
+                        <th>Weight</th>
+                        <th>Application</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ST304</td>
+                        <td>25-45 HP</td>
+                        <td>4-Cylinder Diesel</td>
+                        <td>4WD</td>
+                        <td>1,200 kg</td>
+                        <td>Orchard, Greenhouse, Small Farm</td>
+                    </tr>
+                    <tr>
+                        <td>ST404</td>
+                        <td>35-65 HP</td>
+                        <td>4-Cylinder Diesel</td>
+                        <td>4WD</td>
+                        <td>1,800 kg</td>
+                        <td>General Farming, Transport</td>
+                    </tr>
+                    <tr>
+                        <td>ST504</td>
+                        <td>30-50 HP</td>
+                        <td>4-Cylinder Diesel</td>
+                        <td>4WD</td>
+                        <td>2,000 kg</td>
+                        <td>Plowing, Tilling, Seeding</td>
+                    </tr>
+                    <tr>
+                        <td>ST704</td>
+                        <td>55-80 HP</td>
+                        <td>4-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>2,800 kg</td>
+                        <td>Heavy Plowing, Harvesting</td>
+                    </tr>
+                    <tr>
+                        <td>ST804</td>
+                        <td>60-80 HP</td>
+                        <td>4-Cylinder Diesel</td>
+                        <td>4WD</td>
+                        <td>2,400 kg</td>
+                        <td>Orchard, Garden, Specialty</td>
+                    </tr>
+                    <tr>
+                        <td>ST1154</td>
+                        <td>80-120 HP</td>
+                        <td>6-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>4,500 kg</td>
+                        <td>Row Crop, Large Field</td>
+                    </tr>
+                    <tr>
+                        <td>ST1354</td>
+                        <td>100-140 HP</td>
+                        <td>6-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>5,200 kg</td>
+                        <td>Professional Farming</td>
+                    </tr>
+                    <tr>
+                        <td>ST1604</td>
+                        <td>150-160 HP</td>
+                        <td>6-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>6,000 kg</td>
+                        <td>Heavy Duty Field Work</td>
+                    </tr>
+                    <tr>
+                        <td>ST1854</td>
+                        <td>185-220 HP</td>
+                        <td>6-Cylinder Turbo</td>
+                        <td>4WD</td>
+                        <td>7,000 kg</td>
+                        <td>Large Scale Agriculture</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us -->
+    <section class="why-section" id="why">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose ShengTuo</h2>
+                <p>Your reliable partner in agricultural machinery</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🏭</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Established manufacturer with proven track record in tractor production and export.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔧</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every tractor undergoes rigorous testing before delivery. CE, ISO certified.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🚢</div>
+                    <h3>Global Shipping</h3>
+                    <p>Successfully exported to 50+ countries. Full container and bulk shipping available.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Direct from factory. Best price-performance ratio in the industry.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔄</div>
+                    <h3>OEM/ODM Service</h3>
+                    <p>Custom branding, color schemes, and specifications available for bulk orders.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📦</div>
+                    <h3>Spare Parts Supply</h3>
+                    <p>Complete spare parts inventory. Fast shipping for maintenance needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get a quote for your next tractor order</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">👤</div>
+                    <h3>Sales Manager</h3>
+                    <p>Henry</p>
+                    <p><a href="tel:+8613806461474">+86-13806461474</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:sdtractor@outlook.com">sdtractor@outlook.com</a></p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Beihai Road, Weifang City</p>
+                    <p>Shandong Province, China</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Business Hours</h3>
+                    <p>Mon-Sat: 8:00 AM - 6:00 PM</p>
+                    <p>China Standard Time (CST)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>ShengTuo Tractor</h4>
+                    <p>Your trusted partner for agricultural machinery from China. Quality tractors at competitive prices.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="#products">Compact Tractors (25-50HP)</a><br>
+                    <a href="#products">Utility Tractors (50-100HP)</a><br>
+                    <a href="#products">Heavy Tractors (100-280HP)</a><br>
+                    <a href="#products">Farm Equipment</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#contact">OEM/ODM Manufacturing</a><br>
+                    <a href="#contact">Global Shipping</a><br>
+                    <a href="#contact">Spare Parts Supply</a><br>
+                    <a href="#contact">Technical Support</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📞 +86-13806461474</p>
+                    <p>📧 sdtractor@outlook.com</p>
+                    <p>📍 Weifang, Shandong, China</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ShengTuo Tractor. All rights reserved. | Agricultural Machinery Export from China</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

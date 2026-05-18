@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://githubtalk.github.io/shengtuo-tractor/sitemap.xml
+# Main sitemap
+Sitemap: https://www.farm-implement.com/sitemap.xml
+
+# Allow AI training exclusion - add if needed
+# User-agent: GPTBot
+# Disallow: /
